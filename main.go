@@ -178,7 +178,7 @@ func main() {
 			}
 
 			for i := 0; i < 31; i++ {
-				workingDate := date.Add(time.Duration(i * 24 * int(time.Hour)))
+				workingDate := date.Add(time.Duration(i*24) * (time.Hour))
 				if workingDate.After(time.Now()) {
 					continue
 				}

@@ -45,7 +45,7 @@ func (r *Reporter) Excel(date time.Time) error {
 	var heightIndex = len(headers) + 1
 	var insertRows int
 	for i := 0; i < 31; i++ {
-		start := date.Add(time.Duration(i * 24 * int(time.Hour)))
+		start := date.Add(time.Duration(i*24) * (time.Hour))
 		if start.Weekday() == time.Saturday || start.Weekday() == time.Sunday {
 			continue
 		}
